@@ -1,17 +1,18 @@
 import React from 'react'
 import './Hero.css'
-import heroArt from '../assets/hero-art.png'
+import heroArt from '../assets/hero_bg.png'
 
 export default function Hero() {
+  git
   return (
     <section className="hero-wrapper">
       <div className="hero-card">
         <div className="hero-content">
-          <h1 className="hero-title">HIGH RISK. HIGH REWARD.<br/>INSTANT RESULT</h1>
+          <h1 className="hero-title">HIGH RISK. HIGH REWARD.<br />INSTANT RESULT</h1>
           <button className="hero-cta">PLAY</button>
         </div>
         <div className="hero-art" aria-hidden>
-          <img src={heroArt} alt="hero art" style={{width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12}} />
+          <img className="hero-art-image" src={heroArt} alt="hero art" />
         </div>
       </div>
     </section>

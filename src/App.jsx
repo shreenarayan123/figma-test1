@@ -4,7 +4,7 @@ import GamesGallery from './components/GamesGallery'
 
 export default function App() {
   return (
-    <div id="app" style={{fontFamily: 'sans-serif', padding: 24}}>
+    <div id="app" style={{ fontFamily: 'sans-serif', maxWidth: '1100px', margin: '0 auto', padding: '24px 24px 0 24px' }}>
       <Hero />
       <GamesGallery />
     </div>

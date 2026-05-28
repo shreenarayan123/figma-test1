@@ -2,7 +2,14 @@ html,body,#root{
   height:100%;
   margin:0;
 }
+html{
+  background: #f7f7f8 url('./assets/page-bg.webp') no-repeat top center;
+  background-size: cover;
+}
 body{
-  background:#f7f7f8;
+  background: transparent;
   color:#111;
+}
+#root{
+  min-height: 100%;
 }
