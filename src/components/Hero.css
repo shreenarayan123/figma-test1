@@ -1,0 +1,82 @@
+.hero-wrapper{
+  padding:28px;
+}
+.hero-card{
+  display:flex;
+  gap:24px;
+  align-items:center;
+  justify-content:space-between;
+  background: linear-gradient(135deg,#0b8643 0%, #071731 60%), url('../assets/hero-bg.png');
+  border-radius:16px;
+  padding:28px;
+  color:#fff;
+  box-shadow: 0 8px 30px rgba(3,10,20,0.5);
+  background-size: cover;
+  background-position: center;
+}
+.hero-content{
+  max-width:55%;
+}
+.hero-title{
+  font-family: 'Anek Latin', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 600;
+  font-size:48px;
+  line-height:1.02;
+  margin:0 0 18px 0;
+  color:#fff;
+}
+.hero-cta{
+  background: linear-gradient(90deg,#4a6bff,#2fb7ff);
+  border:none;
+  color:white;
+  padding:18px 40px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:20px;
+  cursor:pointer;
+}
+.hero-art{
+  width:360px;
+  height:150px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.art-placeholder{
+  position:relative;
+  width:320px;
+  height:140px;
+  border-radius:14px;
+  background: radial-gradient(circle at 20% 20%, #10f08c 0%, rgba(16,240,140,0.05) 10%), linear-gradient(180deg,#071731,#001021);
+  overflow:hidden;
+}
+.ball{
+  position:absolute;
+  border-radius:50%;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6) inset;
+}
+.ball-1{
+  width:120px;
+  height:120px;
+  right:12px;
+  top:6px;
+  background: linear-gradient(135deg,#1aff8c,#00bcd4);
+}
+.ball-2{
+  width:64px;
+  height:64px;
+  left:18px;
+  bottom:6px;
+  background: linear-gradient(135deg,#7cf7ff,#3b9cff);
+}
+.racket{
+  position:absolute;
+  right:86px;
+  bottom:-10px;
+  width:140px;
+  height:80px;
+  border-radius:40px 40px 12px 12px;
+  transform:rotate(-18deg);
+  background: linear-gradient(90deg,#7cfcff22,#ffffff09);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
