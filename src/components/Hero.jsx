@@ -3,7 +3,6 @@ import './Hero.css'
 import heroArt from '../assets/hero_bg.png'
 
 export default function Hero() {
-  git
   return (
     <section className="hero-wrapper">
       <div className="hero-card">
