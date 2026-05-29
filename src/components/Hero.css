@@ -115,58 +115,87 @@
   }
 }
 
-/* Mobile: keep side-by-side layout like reference image */
+/* Mobile: slim banner layout */
 @media (max-width: 480px) {
   .hero-wrapper {
-    overflow: visible;
+    overflow: hidden;
   }
 
   .hero-card {
     flex-direction: row;
-    min-height: 130px;
+    width: 100%; /* never overflow the screen */
+    height: 85px;
+    min-height: unset;
+    max-height: 85px;
     border-radius: 12px;
     overflow: hidden;
-    align-items: center;
+    align-items: stretch;
+    position: relative;
+    padding-right: 10px;
   }
 
+  /* Left side: text + button */
   .hero-content {
-    flex: 0 0 58%;
-    max-width: 58%;
-    padding: 16px 0 16px 16px;
-    gap: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 16px;
+    padding-right: 0;
+    gap: 6px;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .hero-title {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0;
   }
 
   .hero-cta {
-    width: 110px;
-    height: 36px;
-    font-size: 12px;
-    border-radius: 8px;
+    width: 92px;
+    height: 23px;
+    font-size: 11px;
+    border-radius: 6px;
     letter-spacing: 0.05em;
+    flex-shrink: 0;
   }
 
+  /* Art behind text */
   .hero-art {
-    flex: 0 0 42%;
-    max-width: 42%;
-    position: relative;
-    opacity: 1;
-    align-items: flex-end;
-    overflow: visible;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
   }
 
+  /* Image: small enough to fit fully within 85px card, no overflow */
   .hero-art-image {
-    height: 110%;
-    width: auto;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 10px;
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom right;
+    transform: none;
+    top: auto;
+    left: auto;
   }
 }
+
+
+
+
+
+
 
