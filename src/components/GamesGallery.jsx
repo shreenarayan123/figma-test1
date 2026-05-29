@@ -1,5 +1,6 @@
 import React from 'react'
 import './GamesGallery.css'
+import comp106 from '../assets/Component 106.png'
 
 const games = [
   {
@@ -55,6 +56,14 @@ const games = [
     title: 'Sugar Rush',
     developer: 'pragmatic play',
     image: 'https://api.builder.io/api/v1/image/assets/TEMP/2c7f85aa18f7039c557872a47a46a05c01c9b485?placeholderIfAbsent=true&apiKey=a9f27f8eac8944d98108e9f6032b2530',
+    price: 'USD 1.04',
+    id_masked: 'PGd***'
+  },
+  {
+    id: 8,
+    title: 'Component 106',
+    developer: 'featured',
+    image: comp106,
     price: 'USD 1.04',
     id_masked: 'PGd***'
   }

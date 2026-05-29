@@ -5,16 +5,26 @@
 
 .gallery-container {
   width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* hide scrollbar but keep scroll */
+  scrollbar-width: none;
+}
+
+.gallery-container::-webkit-scrollbar {
+  display: none;
 }
 
 .games-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 14px;
   background-color: rgba(14, 27, 49, 0.85);
   border-radius: 13px;
   padding: 18px;
-  width: fit-content;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #1e3a5f;
 }
 
 .game-card {
@@ -22,6 +32,8 @@
   flex-direction: column;
   align-items: stretch;
   text-align: center;
+  flex: 1;
+  min-width: 100px; /* prevents cards from getting too narrow */
 }
 
 .game-image-wrapper {
@@ -30,7 +42,7 @@
   background-color: rgba(17, 28, 48, 1);
   overflow: hidden;
   aspect-ratio: 0.725;
-  width: 137px;
+  width: 100%;
 }
 
 .game-image {
@@ -100,40 +112,52 @@
 
 @media (max-width: 991px) {
   .games-grid {
-    gap: 20px;
-    padding: 16px;
-  }
-
-  .game-image-wrapper {
-    width: 100px;
-    aspect-ratio: 0.725;
+    gap: 10px;
+    padding: 14px;
   }
 
   .game-title {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .game-developer {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 
 @media (max-width: 600px) {
   .gallery-wrapper {
-    padding: 16px;
+    padding: 0;
+    margin-top: 12px;
   }
 
   .games-grid {
-    gap: 12px;
-    padding: 12px;
+    gap: 8px;
+    padding: 10px;
+    /* don't stretch to 100% on mobile — let it be as wide as content */
+    width: max-content;
+    min-width: 100%;
   }
 
   .game-card {
-    flex: 1 1 calc(50% - 6px);
-    min-width: 80px;
+    min-width: 90px;
+    flex: 0 0 90px;
   }
 
   .game-image-wrapper {
-    width: 100%;
+    width: 90px;
+  }
+
+  .game-title {
+    font-size: 11px;
+  }
+
+  .game-developer {
+    font-size: 8px;
+  }
+
+  .game-info {
+    font-size: 11px;
+    margin-top: 6px;
   }
 }

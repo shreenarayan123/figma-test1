@@ -1,0 +1,19 @@
+.app-container {
+  font-family: sans-serif;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 24px 0 24px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 16px 14px 0 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 12px 10px 0 10px;
+  }
+}
