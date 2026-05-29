@@ -115,57 +115,58 @@
   }
 }
 
-/* Mobile: stack vertically */
+/* Mobile: keep side-by-side layout like reference image */
 @media (max-width: 480px) {
   .hero-wrapper {
-    overflow: hidden;
+    overflow: visible;
   }
 
   .hero-card {
-    flex-direction: column;
-    min-height: 180px;
+    flex-direction: row;
+    min-height: 130px;
     border-radius: 12px;
     overflow: hidden;
-    position: relative;
+    align-items: center;
   }
 
   .hero-content {
-    flex: unset;
-    max-width: 100%;
-    width: 100%;
-    padding: 22px 20px 20px 20px;
-    gap: 14px;
+    flex: 0 0 58%;
+    max-width: 58%;
+    padding: 16px 0 16px 16px;
+    gap: 12px;
     z-index: 2;
   }
 
   .hero-title {
-    font-size: 20px;
-    line-height: 1.15;
+    font-size: 15px;
+    line-height: 1.2;
+    letter-spacing: 0;
   }
 
   .hero-cta {
-    width: 140px;
-    height: 40px;
-    font-size: 13px;
+    width: 110px;
+    height: 36px;
+    font-size: 12px;
     border-radius: 8px;
+    letter-spacing: 0.05em;
   }
 
-  /* Art floats as right-side overlay on mobile */
   .hero-art {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 45%;
-    max-width: 45%;
-    flex: unset;
-    opacity: 0.55;
-    pointer-events: none;
+    flex: 0 0 42%;
+    max-width: 42%;
+    position: relative;
+    opacity: 1;
+    align-items: flex-end;
+    overflow: visible;
   }
 
   .hero-art-image {
-    height: 100%;
+    height: 110%;
+    width: auto;
+    position: absolute;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
   }
 }
+

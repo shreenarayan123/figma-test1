@@ -1,72 +1,22 @@
 import React from 'react'
 import './GamesGallery.css'
+
+import comp104 from '../assets/Component 104.png'
+import comp105 from '../assets/Component 105.png'
 import comp106 from '../assets/Component 106.png'
+import comp107 from '../assets/Component 107.png'
+import comp108 from '../assets/Component 108.png'
+import comp109 from '../assets/Component 109.png'
+import comp110 from '../assets/Component 110.png'
 
 const games = [
-  {
-    id: 1,
-    title: 'Sugar Rush',
-    developer: 'pragmatic play',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/73cab64a0b1254d540aa61b9adcc7c6215f60b48?placeholderIfAbsent=true&apiKey=a9f27f8eac8944d98108e9f6032b2530',
-    price: 'USD 1.04',
-    id_masked: 'PGd***'
-  },
-  {
-    id: 2,
-    title: 'Gates Of Olympus',
-    developer: 'pragmatic play',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/9fd192f21247b01d61508f3c76a6fc504766b2ab?placeholderIfAbsent=true&apiKey=a9f27f8eac8944d98108e9f6032b2530',
-    price: 'USD 1.067',
-    id_masked: 'PGd***'
-  },
-  {
-    id: 3,
-    title: 'Book Of Dead',
-    developer: 'Pragmatic play',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/1aa5136043d2998363ce8f1a153ca744e1f07cda?placeholderIfAbsent=true&apiKey=a9f27f8eac8944d98108e9f6032b2530',
-    price: 'USD 1.04',
-    id_masked: 'PGd***'
-  },
-  {
-    id: 4,
-    title: 'Deadwood',
-    developer: 'Nolimit city',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/36c24e3ad41deb8aff37991e94190cad4ec87a11?placeholderIfAbsent=true&apiKey=a9f27f8eac8944d98108e9f6032b2530',
-    price: 'USD 1.04',
-    id_masked: 'PGd***'
-  },
-  {
-    id: 5,
-    title: 'The Dog House',
-    developer: 'bc game',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/ad77f8c171a8344382c809acbd683e7da66d4c97?placeholderIfAbsent=true&apiKey=a9f27f8eac8944d98108e9f6032b2530',
-    price: 'USD 1.04',
-    id_masked: 'PGd***'
-  },
-  {
-    id: 6,
-    title: 'Fire In The Hole 2',
-    developer: 'nolimit city',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/4f8f207bb30b632387371d5e10041f6c5eb1108b?placeholderIfAbsent=true&apiKey=a9f27f8eac8944d98108e9f6032b2530',
-    price: 'USD 1.04',
-    id_masked: 'PGd***'
-  },
-  {
-    id: 7,
-    title: 'Sugar Rush',
-    developer: 'pragmatic play',
-    image: 'https://api.builder.io/api/v1/image/assets/TEMP/2c7f85aa18f7039c557872a47a46a05c01c9b485?placeholderIfAbsent=true&apiKey=a9f27f8eac8944d98108e9f6032b2530',
-    price: 'USD 1.04',
-    id_masked: 'PGd***'
-  },
-  {
-    id: 8,
-    title: 'Component 106',
-    developer: 'featured',
-    image: comp106,
-    price: 'USD 1.04',
-    id_masked: 'PGd***'
-  }
+  { id: 1, image: comp104, id_masked: 'PGd***', price: 'USD 1.04' },
+  { id: 2, image: comp105, id_masked: 'PGd***', price: 'USD 1.067' },
+  { id: 3, image: comp106, id_masked: 'PGd***', price: 'USD 1.04' },
+  { id: 4, image: comp107, id_masked: 'PGd***', price: 'USD 1.04' },
+  { id: 5, image: comp108, id_masked: 'PGd***', price: 'USD 1.04' },
+  { id: 6, image: comp109, id_masked: 'PGd***', price: 'USD 1.04' },
+  { id: 7, image: comp110, id_masked: 'PGd***', price: 'USD 1.04' },
 ]
 
 export default function GamesGallery() {
@@ -77,11 +27,7 @@ export default function GamesGallery() {
           {games.map((game) => (
             <div key={game.id} className="game-card">
               <div className="game-image-wrapper">
-                <img src={game.image} alt={game.title} className="game-image" />
-                <div className="game-overlay">
-                  <h3 className="game-title">{game.title}</h3>
-                  <p className="game-developer">{game.developer}</p>
-                </div>
+                <img src={game.image} alt={`Game ${game.id}`} className="game-image" />
               </div>
               <div className="game-info">
                 <div className="game-id">{game.id_masked}</div>

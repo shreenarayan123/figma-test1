@@ -54,37 +54,6 @@
   object-fit: cover;
 }
 
-.game-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px 12px;
-  background: linear-gradient(to bottom, rgba(6, 13, 35, 0), rgba(6, 13, 35, 1));
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-end;
-}
-
-.game-title {
-  font-family: 'montserrat', -apple-system, roboto, helvetica, sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  color: #fff;
-  margin: 0;
-  line-height: 1.1;
-}
-
-.game-developer {
-  font-family: 'montserrat', -apple-system, roboto, helvetica, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #fff;
-  margin: 7px 0 0 0;
-  line-height: 1;
-}
 
 .game-info {
   display: flex;
@@ -115,14 +84,6 @@
     gap: 10px;
     padding: 14px;
   }
-
-  .game-title {
-    font-size: 14px;
-  }
-
-  .game-developer {
-    font-size: 9px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -132,32 +93,39 @@
   }
 
   .games-grid {
-    gap: 8px;
+    gap: 6px;
     padding: 10px;
-    /* don't stretch to 100% on mobile — let it be as wide as content */
     width: max-content;
     min-width: 100%;
   }
 
   .game-card {
-    min-width: 90px;
-    flex: 0 0 90px;
+    min-width: 70px;
+    flex: 0 0 70px;
   }
 
   .game-image-wrapper {
-    width: 90px;
-  }
-
-  .game-title {
-    font-size: 11px;
-  }
-
-  .game-developer {
-    font-size: 8px;
+    width: 70px;
   }
 
   .game-info {
-    font-size: 11px;
-    margin-top: 6px;
+    font-size: 10px;
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 390px) {
+  .game-card {
+    min-width: 58px;
+    flex: 0 0 58px;
+  }
+
+  .game-image-wrapper {
+    width: 58px;
+  }
+
+  .games-grid {
+    gap: 5px;
+    padding: 8px;
   }
 }
